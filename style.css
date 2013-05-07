@@ -14,6 +14,7 @@ a{
 }
 a:hover{
 	cursor: pointer;
+	/* text-decoration: underline; */
 }
 ul{
 	padding: 0;
@@ -48,7 +49,8 @@ label {
 }
 input{
 	width: 200px;
-	border: none;
+	border: 1px solid;
+	border-color: #bbb;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
@@ -63,7 +65,7 @@ input:focus {
 	border:1px solid #79D736;
 }
 button {
-	display: block;
+	/* display: block; */
 	background: #75001F;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -85,6 +87,9 @@ td{
 }
 .contents{
 	clear: both;
+}
+.hidden{
+	display: none;
 }
 #overlayEffect
 {
@@ -128,47 +133,33 @@ td{
 	top:-25px;
 	right:-22px;
 }
-
-#login-banner{
+.login{
+	/* width: 100%; */
+	margin: 1% 10%;
+}
+.login-banner{
 	width: 400px;
 	margin: auto;
-	padding: 30px 0;
+	padding: 20px 0;
 	
 }
-#login-banner img{
+.login-banner img{
 	float: left;
 	height: 130px;
 }
-#login-banner h1{
+.login-banner h1{
 	font-size: 4em;
 	float: right;
 	margin-left: 0;
 	margin-top:	30px;
 }
-#login-content{
-	clear: both;
-	margin: 100px 100px;
-}
-#login-form{
-	margin-top: 20px;
-	padding: 5px 0 0 280px;
-	border-radius: 5px;
-	background: #92D761;
-}
-#login-form form{
-	width: 600px;
+#login-buttons{
+	width: 270px;
 	margin: auto;
 }
-#login-form input{
-	margin-left: 30px;
-}
-#login-submitbutton{
-	display: inline;
-	width: 100px;
-	margin-left: 20px;
-}
-#login-splash{
-	width: 100%;
+#signup{
+	width: 200px;
+	margin: auto;
 }
 #user-header{
 }

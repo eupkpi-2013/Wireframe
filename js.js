@@ -14,6 +14,10 @@ $(document).ready(function(){
 		$(".kpitable").append('<tr><td><input></input></td><td><select><option>Text</option>option>Integer</option><option>Boolean</option><option>Time Range</option></select></td></tr>');
 	});
 	
+	$("#signup-button").click(function(){
+		$("#signup").slideToggle();
+	});
+	
 	//for popup divs
 	$(function() {
 
