@@ -85,11 +85,11 @@ td{
 .righted{
 	float: right;
 }
-.contents{
-	clear: both;
-}
 .hidden{
 	display: none;
+}
+.rounded{
+	border-radius: 10px;
 }
 #overlayEffect
 {
@@ -108,11 +108,11 @@ td{
 {
 	clear: both;
 	display: none;
-	position:fixed;
+	position: fixed;
 	left:50%;
 	top:50%;
 	width:500px;
-	background:white;
+	background: white;
 	border:5px solid #cecece;
 	z-index:2;
 	padding:10px;
@@ -121,17 +121,8 @@ td{
 	-webkit-box-shadow: 0 0 2px rgba(255, 255, 255, 0.6) inset;
 	box-shadow: 0 0 2px rgba(255, 255, 255, 0.6) inset;
 }
-#close
+.closepopup
 {
-	background:url(images/x.png) no-repeat center center;
-	cursor:pointer;
-	width:25px;
-	height:26px;
-	position:fixed;
-	z-index:3200;
-	position:absolute;
-	top:-25px;
-	right:-22px;
 }
 .login{
 	/* width: 100%; */
@@ -161,19 +152,19 @@ td{
 	width: 200px;
 	margin: auto;
 }
-#user-header{
-}
-#user-banner img{
+.banner img{
+	float: left;
 	margin: 10px 20px;
 	width: 100px;
 }
-#user-banner h1{
+.banner h1{
+	float: left;
 	margin-top: 50px;
 }
-#user-logout{
+.logout{
 	margin: 50px 40px 0 0;
 }
-#user-nav{
+.nav{
 	clear: both;
 	float: left;
 	width: 100%;
@@ -181,15 +172,15 @@ td{
 	background: #92D761;
 	border-bottom: 5px solid #75001F;
 }
-#user-nav ul{
+.nav ul{
 	margin: 0;
 	padding: 0;
 }
-#user-nav li{
+.nav li{
 	float: left;
 	padding: 10px 30px;
 }
-#user-nav a:hover{
+.nav a:hover{
 	color: white;
 	-webkit-transition:  0.2s ease-in-out;
 	-moz-transition:  0.2s ease-in-out;
@@ -198,12 +189,12 @@ td{
 	transition:  0.2s ease-in-out;
 	/* border-left: 5px solid #75001F; */
 }
-#user-contents{
+.contents{
 	clear: both;
 	padding: 20px 40px;
 }
-#user-kpimenu{
-	width: 250px;
+.menu{
+	width: 300px;
 	/* border: 1px solid; */
 }
 .accordion{
@@ -223,7 +214,7 @@ td{
 	transition:  0.2s ease-in-out;
 	border-left: 5px solid #75001F;
 }
-.accordion ul{
+.accordion-list{
 	display: none;
 	margin: 0;
 }
@@ -233,7 +224,7 @@ td{
 	padding-bottom: 10px;
 	padding-left: 30px;
 }
-.accordion div div:hover{
+.accordion li:hover{
 	color: #75001F;
 	cursor: pointer;
 	-webkit-transition:  0.2s ease-in-out;
@@ -247,17 +238,14 @@ td{
 	/* border-left: 5px solid #75001F; */
 	font-weight: bold;
 }
-.done{
+.rate-done{
 	border-right: 10px solid #79D736;
 }
-.kulang{
+.rate-kulang{
 	border-right: 10px solid #FFE100;
 }
-#user-inside{
-	margin-left: 30px;
-}
-.ratingsdiv{
-	clear: both;
+.inside{
+	margin-left: 330px;
 }
 .ratingsdiv div{
 	padding-top: 10px;
@@ -290,4 +278,12 @@ td{
 }
 .kpitable td{
 	padding: 10px;
+}
+.table-lined tr{
+	border-bottom: 1px solid;
+	border-bottom-color: #ebb;
+}
+.table-lined th{
+	border-bottom: 1px solid;
+	border-bottom-color: #bbb;
 }
