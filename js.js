@@ -12,6 +12,10 @@ $(document).ready(function(){
 		$("#signup").slideToggle();
 	});
 	
+	$("#metric1-viewprev-button").click(function(){
+		$(".metric1-prev").toggle();
+	});
+	
 	//for popup divs
 	$(function() {
 

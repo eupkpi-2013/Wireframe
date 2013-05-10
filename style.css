@@ -64,6 +64,9 @@ input:focus {
     -moz-box-shadow: 0 0 5px rgba(255,255,255, 1); 
 	border:1px solid #79D736;
 }
+input[type='checkbox']{
+	width: 20px;
+}
 button {
 	/* display: block; */
 	background: #75001F;
@@ -90,6 +93,28 @@ td{
 }
 .rounded{
 	border-radius: 10px;
+}
+.alert{
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 20px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.alert-yellow{
+	color: #BFB337;
+	background-color: #FFF379;
+}
+.alert-blue{
+	color: #0A51A6;
+	background-color: #84BCFF;
+}
+.alert-red{
+	color: #A61704;
+	background-color: #FF8979;
 }
 #overlayEffect
 {
