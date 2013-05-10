@@ -4,9 +4,9 @@ $(document).ready(function(){
 	$(".accordion h3").click(function(){
 		$(this).parent().find($(".accordion-list")).slideToggle("slow");
 	});
-	// $(".addrowbutton").click(function(){
-		// $(".kpitable").append('<tr><td><input></input></td><td><select><option>Text</option>option>Integer</option><option>Boolean</option><option>Time Range</option></select></td></tr>');
-	// });
+	$(".addrowbutton").click(function(){
+		$(".kpitable").append('<tr><td><input></input></td><td><select><option>Text</option>option>Integer</option><option>Boolean</option><option>Time Range</option></select></td></tr>');
+	});
 	
 	$("#signup-button").click(function(){
 		$("#signup").slideToggle();
