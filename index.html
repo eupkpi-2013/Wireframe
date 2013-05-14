@@ -7,33 +7,14 @@
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
 <script src="../js/jquery-1.9.1.js"></script>
+<script src="C:\Users\Minnie_2\Documents\CS\HTML\js/jquery-1.9.1.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="../Highcharts-3.0.1/js/highcharts.js"></script>
-
-
-<script language="javascript" type="text/javascript">
-	function submitted(){
-		var username = document.getElementById("uname").value;
-		var redirectto = "";
-		if(username=="user"){
-			redirectto = "user_home.html";
-		}
-		else if(username=="auditor"){
-			redirectto = "auditor_home.html";
-		}
-		else if(username=="superuser"){
-			redirectto = "superuser_home.html";
-		}
-		else if(username=="boss"){
-			redirectto = "boss_home.html";
-		}
-		window.location = redirectto;
-	}
-</script>
+<script src="js.js"></script>
 
 <script language="javascript" type="text/javascript">
 $(document).ready(function(){
-        $('#login-splash').highcharts({
+        $('.splash').highcharts({
             chart: {
                 type: 'column'
             },
@@ -97,30 +78,35 @@ $(document).ready(function(){
     });
 </script>
 
+
 <title>eUP KPI</title>
 </head>
 
 <body>
-<div id="login-banner">
-	<img src="img/up_small.png"/>
-	<h1>eUP KPI</h1>
-</div>
-
-<div id="login-content">
-	<div id="login-form">
-		<!-- <form name="login" method="post"> -->
-			<input id="uname" type="text" name="username" placeholder="Username"/>
-			<input id="pwd" type="password" name="password" placeholder="Password"/>
-			<button id="login-submitbutton" onclick="submitted()">Login</button>
-		<!-- </form> -->			
-			<!-- <button id="login-googlebutton">Sign in with Google</button> -->
+	<div class="login login-banner">
+		<img src="img/up_small.png"/>
+		<h1>eUP KPI</h1>
 	</div>
-	<div id="login-splash"></div>	
-	<a href="public_results.html"><button>See Public Reports</button><a>
-</div>
+
+	<div id="login-buttons" class="login content">
+		<button>Log-in with Google</button>
+		<button id="signup-button">Sign up</button>
+		<div id="signup" class="hidden">
+			<label>Name</label>
+			<input></input>
+			<label>Gmail</label>
+			<input></input>
+			<button class="righted">Submit</button>
+		</div>
+	</div>
+	<div class="login splash"></div>	
+	<div class="login">
+		<button><a href="public_results.html">See Public Reports</a></button>
+	</div>
+
 
 <footer>
-	<div id="login-about">
+	<div>
 		<a href="about.html">About</a>
 	</div>
 </footer>
