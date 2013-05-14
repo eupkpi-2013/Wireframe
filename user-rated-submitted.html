@@ -7,20 +7,20 @@
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
 <script src="../js/jquery-1.9.1.js"></script>
+<script src="C:\Users\Minnie_2\Documents\CS\HTML\js/jquery-1.9.1.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="../Highcharts-3.0.1/js/highcharts.js"></script>
 <script src="js.js"></script>
-
 <title>eUP KPI</title>
 </head>
 
 <body>
-<div id="user-header">
+<div id="user-header" class="header">
 	<header>
 		<a href="">
 		<div id="user-banner" class="banner">
-			<img src="img/up_small.png" class="lefted"/>
-			<h1 class="lefted">eUP KPI</h1>
+			<img src="img/up_small.png" class=""/>
+			<h1 class="">eUP KPI</h1>
 		</div>
 		</a>
 		<div id="user-logout" class="logout righted">
@@ -29,26 +29,41 @@
 		</div>
 		<div id="user-nav" class="nav">
 			<ul>
-			<li id="user-home"><a href="auditor_home.html">Home</a></li>
-			<li id="user-verify"><a href="auditor_verify.html">Verify</a></li>
-			<li id="user-results"><a href="auditor_results.html">Results</a></li>
+			<li id="user-home"><a href="user_home.html">Home</a></li>
+			<li id="user-rate"><a href="user_rate.html">Rate</a></li>
+			<li id="user-results"><a href="user_results.html">Results</a></li>
 			</ul>
 		</div>
 	</header>
 </div>
 <div id="user-contents" class="contents">	
 	<div id="user-kpimenu" class="accordion menu lefted">
-		<div class="active"><a href="auditor_verify_user001.html"><h3>User001</h3></a>
+		<div><h3>KPI1</h3>
+			<ul>
+			<div class="rate-done"><li><a href="user_rate_kpi1.html">Sub KPI1</a></li></div>
+			<div class="rate-done"><li><a href="user_rate_kpi1-2.html">Sub KPI2</a></li></div>	
+			<div class="rate-done"><li><a href="user_rate_kpi1-3.html">Sub KPI3</a></li></div>	
+			</ul>
 		</div>
-		<div><a href="auditor_verify_user002.html"><h3>User002</h3></a>
+		<div><h3>KPI2</h3>
+			<ul>
+			<div class="rate-done"><li><a href="user_rate_kpi2.html">Sub KPI1</a></li></div>	
+			<div class="rate-done"><li><a href="user_rate_kpi2-2.html">Sub KPI2</a></li></div>	
+			<div class="rate-done"><li><a href="user_rate_kpi2-3.html">Sub KPI3</a></li></div>	
+			</ul>
 		</div>
-		<div><a href="auditor_verify_user003.html"><h3>User003</h3></a>
+		<div><h3>KPI3</h3>
+			<ul>
+			<div class="rate-done"><li><a href="user_rate_kpi3.html">Sub KPI1</a></li></div>	
+			<div class="rate-done"><li><a href="user_rate_kpi3-2.html"> Sub KPI2</a></li></div>	
+			<div class="rate-done"><li><a href="user_rate_kpi3-3.html">Sub KPI3</a></li></div>	
+			</ul>
 		</div>
 	</div>
 	<div id="user-inside" class="inside">
 		<h2>eUP KPI: After 2 months</h2>
-		<h2>User001</h2>
-		<div class="ratingsdiv"> <h3>KPI1</h3>
+			<div class="alert alert-yellow">Your ratings have been submitted.</div>
+			<div class="ratingsdiv"> <h3>KPI1</h3>
 				<div>Sub KPI1
 					<table class="table-lined">
 						<tr>
@@ -105,7 +120,8 @@
 						<tr>
 					</table>
 				</div>
-			</div>
+			<div>
+			
 			<div class="ratingsdiv"> <h3>KPI2</h3>
 				<div>Sub KPI1
 					<table class="table-lined">
@@ -164,18 +180,10 @@
 					</table>
 				</div>
 			</div>
-		<button id="verifybutton" class="righted">Verify</button>	
+		</div>
 	</div>
-	<div class="popup">
-			<h2>
-				Verify and Send this data to Super User?
-			</h2>
-			<a href="auditor_verify_user002.html"><input value="Yes" class="close" type="button"></a>
-			<input value="No" class="close" type="button">
 	</div>
-	<div id="overlayEffect"/>
 </div>
-
 <footer>
 	<div id="login-about">
 		<a href="about.html">About</a>

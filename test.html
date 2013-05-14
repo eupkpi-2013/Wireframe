@@ -7,37 +7,10 @@
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
 <script src="../js/jquery-1.9.1.js"></script>
+<script src="C:\Users\Minnie_2\Documents\CS\HTML\js/jquery-1.9.1.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="../Highcharts-3.0.1/js/highcharts.js"></script>
 <script src="js.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-		$('.resultchart').highcharts({
-        chart: {
-            type: 'bar'
-        },
-        title: {
-            text: 'Fruit Consumption'
-        },
-        xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
-        },
-        yAxis: {
-            title: {
-                text: 'Fruit eaten'
-            }
-        },
-        series: [{
-            name: 'Jane',
-            data: [1, 0, 4]
-        }, {
-            name: 'John',
-            data: [5, 7, 3]
-        }],
-    });
-	});
-</script>
 
 <title>eUP KPI</title>
 </head>
@@ -65,23 +38,33 @@ $(document).ready(function(){
 	</header>
 </div>
 <div id="user-contents" class="contents">	
-	<div id="user-resultsmenu" class="accordion menu lefted">
-		<div><h3>Report1</h3>
+	<div id="user-kpimenu" class="accordion kpimenu lefted">
+		<div><h3>KPI1</h3>
+			<ul class="accordion-list">
+			<li><a href="user_rate_kpi1.html">Sub KPI1</a></li>
+			<li><a href="user_rate_kpi1-2.html">Sub KPI2</a></li>	
+			<li><a href="user_rate_kpi1-3.html">Sub KPI3</a></li>
+			</ul>
 		</div>
-		<div><h3>Report2</h3>
+		<div><h3>KPI2</h3>
+			<ul class="accordion-list">
+			<li><a href="user_rate_kpi1.html">Sub KPI1</a></li>
+			<li><a href="user_rate_kpi1-2.html">Sub KPI2</a></li>	
+			<li><a href="user_rate_kpi1-3.html">Sub KPI3</a></li>
+			</ul>
 		</div>
-		<div><h3>Report3</h3>
+		<div><h3>KPI3</h3>
+			<ul class="accordion-list">
+			<li><a href="user_rate_kpi1.html">Sub KPI1</a></li>
+			<li><a href="user_rate_kpi1-2.html">Sub KPI2</a></li>	
+			<li><a href="user_rate_kpi1-3.html">Sub KPI3</a></li>	
+			</ul>
 		</div>
 	</div>
-	<div id="user-inside" class="inside">
-		<div class="resultchart"></div>
-		<div id="downloadas">Download:
-			<select>
-			  <option value="">PDF</option>
-			  <option value="">EXCEL</option>
-			  <option value="">TXT</option>
-			</select>
-		</div>
+	<div id="user-inside" class="inside lefted">
+		<h2>eUP KPI: After 2 months</h2>
+		<p>Choose a KPI on the left.</p><br>
+		<button>View your previous ratings</button>
 	</div>
 </div>
 

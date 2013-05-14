@@ -12,13 +12,29 @@
 <script src="js.js"></script>
 
 <script type="text/javascript">
-$(document).ready(function(){
-		$('.resultchart').highcharts({
+	$(document).ready(function(){
+		$('.printablewindow').click(function(){
+			window.open('printable.html', 'window name', 'window settings');
+			return false;
+		});
+		
+		$('.slideshow-inactive').hide();
+		$('.slideshow-active').show();
+		$('.slideshow-left').click(function(){
+			$('.testchart').toggle();
+			$('.testchart2').toggle();
+		});
+		$('.slideshow-right').click(function(){
+			$('.testchart').toggle();
+			$('.testchart2').toggle();
+		});
+		
+		$('.testchart').highcharts({
         chart: {
             type: 'bar'
         },
         title: {
-            text: 'Fruit Consumption'
+            text: 'Test Chart 1'
         },
         xAxis: {
             categories: ['Apples', 'Bananas', 'Oranges']
@@ -35,7 +51,30 @@ $(document).ready(function(){
             name: 'John',
             data: [5, 7, 3]
         }],
-    });
+	});
+	$('.testchart2').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Test Chart 2'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }],
+	});	
 	});
 </script>
 
@@ -66,27 +105,24 @@ $(document).ready(function(){
 	</header>
 </div>
 <div id="user-contents" class="contents">
-	<div id="user-kpimenu" class="accordion menu lefted">
-		<div><h3>Report1</h3>
-		</div>
-		<div><h3>Report2</h3>
-		</div>
-		<div><h3>Report3</h3>
-		</div>
+	<h2>New Report Preview</h2>
+	<h3>Report Title 001xppooii</h3>
+	<p>Description here. anduei;rubgila</p>
+	<div class="slideshow">Highchartss here
+		<div class="lefted"><button class="slideshow-left"><</button></div>
+		<div class="testchart slideshow-content slideshow-active"></div>
+		<div class="testchart2 slideshow-content slideshow-inactive"></div>
+		<div class="righted"><button class="slideshow-right">></button></div>
 	</div>
-	<div id="user-inside" class="inside">
-		<div class="alert">New KPI have been submitted.</div>
-		<a href="superuser_generate.html"><button>Create New Report</button></a>
-		<div class="resultchart"></div>
-		<div id="downloadas">Download:
-			<select>
-			  <option value="">PDF</option>
-			  <option value="">EXCEL</option>
-			  <option value="">TXT</option>
-			</select>
-		</div>
-	</div>
+	<button>View TXT</button>
+	<button>View Excel</button>
+	<button>View PDF</button>
+	<button class="printablewindow">View Printable Page</button><br>
+	<a href="superuser_generate.html"><button>Edit</button></a>
+	<a href="superuser_results.html"><button>Publish</button></a>
+	
 </div>
+<div class="popup"></div>
 
 <footer>
 	<div id="login-about">

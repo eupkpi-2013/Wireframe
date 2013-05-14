@@ -7,6 +7,7 @@
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
 <script src="../js/jquery-1.9.1.js"></script>
+<script src="C:\Users\Minnie_2\Documents\CS\HTML\js/jquery-1.9.1.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="../Highcharts-3.0.1/js/highcharts.js"></script>
 <script src="js.js"></script>
@@ -14,19 +15,19 @@
 </head>
 
 <body>
-<div id="user-header">
+<div id="user-header" class="header">
 	<header>
 		<a href="">
-		<div id="user-banner">
-			<img src="img/up_small.png" class="lefted"/>
-			<h1 class="lefted">eUP KPI</h1>
+		<div id="user-banner" class="banner">
+			<img src="img/up_small.png" class=""/>
+			<h1 class="">eUP KPI</h1>
 		</div>
 		</a>
-		<div id="user-logout" class="righted">
+		<div id="user-logout" class="logout righted">
 			<a herf="">Logged in as User, </a>
 			<a href="index.html">Logout</a>
 		</div>
-		<div id="user-nav">
+		<div id="user-nav" class="nav">
 			<ul>
 			<li id="user-home"><a href="user_home.html">Home</a></li>
 			<li id="user-rate"><a href="user_rate.html">Rate</a></li>
@@ -36,47 +37,99 @@
 	</header>
 </div>
 <div id="user-contents" class="contents">	
-	<div id="user-kpimenu" class="accordion lefted">
+	<div id="user-kpimenu" class="accordion menu lefted">
 		<div><h3>KPI1</h3>
-			<ul>
-			<div class="active"><li><a href="user_rate_kpi1.html">Sub KPI1</a></li></div>
-			<div><li><a href="user_rate_kpi1-2.html">Sub KPI2</a></li></div>	
-			<div><li><a href="user_rate_kpi1-3.html">Sub KPI3</a></li></div>	
+			<ul class="accordion-list">
+			<li class="active"><a href="user_rate_kpi1.html">Sub KPI1</a></li>
+			<li><a href="user_rate_kpi1-2.html">Sub KPI2</a></li>	
+			<li><a href="user_rate_kpi1-3.html">Sub KPI3</a></li>
 			</ul>
 		</div>
 		<div><h3>KPI2</h3>
-			<ul>
-			<div><li><a href="user_rate_kpi2.html">Sub KPI1</a></li></div>	
-			<div><li><a href="user_rate_kpi2-2.html">Sub KPI2</a></li></div>	
-			<div><li><a href="user_rate_kpi2-3.html">Sub KPI3</a></li></div>	
+			<ul class="accordion-list">
+			<li><a href="user_rate_kpi1.html">Sub KPI1</a></li>
+			<li><a href="user_rate_kpi1-2.html">Sub KPI2</a></li>	
+			<li><a href="user_rate_kpi1-3.html">Sub KPI3</a></li>
 			</ul>
 		</div>
 		<div><h3>KPI3</h3>
-			<ul>
-			<div><li><a href="user_rate_kpi3.html">Sub KPI1</a></li></div>	
-			<div><li><a href="user_rate_kpi3-2.html"> Sub KPI2</a></li></div>	
-			<div><li><a href="user_rate_kpi3-3.html">Sub KPI3</a></li></div>	
+			<ul class="accordion-list">
+			<li><a href="user_rate_kpi1.html">Sub KPI1</a></li>
+			<li><a href="user_rate_kpi1-2.html">Sub KPI2</a></li>	
+			<li><a href="user_rate_kpi1-3.html">Sub KPI3</a></li>	
 			</ul>
 		</div>
 	</div>
-	<div id="user-inside" class="lefted">
+	<div id="user-inside" class="inside">
 		<h2>KPI1 > Sub KPI1</h2>
 		<table>
 		<tr>
 			<td>Metric1</td>
 			<td><input type="text"></input></td>
+			<td><button id="metric1-viewprev-button">View Previous Ratings</button></td>
 		</tr>
+		<tr class="hidden metric1-prev">
+				<td>Baseline</td>
+				<td>500</td>
+		</tr>
+		<tr class="hidden metric1-prev">
+				<td>Target</td>
+				<td>200</td>
+		</tr>
+		<tr class="hidden metric1-prev">
+				<td>Migration</td>
+				<td>500</td>
+		</tr>		
 		<tr>
-			<td>Metric2</td>
+			<td>Metric1</td>
 			<td><input type="text"></input></td>
+			<td><button>View Previous Ratings</button></td>
+		</tr>
+		<tr class="hidden">
+				<td>Baseline</td>
+				<td>500</td>
+		</tr>
+		<tr class="hidden">
+				<td>Baseline</td>
+				<td>500</td>
+		</tr>
+		<tr class="hidden">
+				<td>Baseline</td>
+				<td>500</td>
 		</tr>
 		<tr>
 			<td>Metric3</td>
 			<td><input type="text"></input></td>
+			<td><button>View Previous Ratings</button></td>
+		</tr>
+		<tr class="hidden">
+				<td>Baseline</td>
+				<td>500</td>
+		</tr>
+		<tr class="hidden">
+				<td>Target</td>
+				<td>100</td>
+		</tr>
+		<tr class="hidden">
+				<td>At Migration</td>
+				<td>500</td>
 		</tr>
 		<tr>
 			<td>Metric4</td>
 			<td><input type="text"></input></td>
+			<td><button>View Previous Ratings</button></td>
+		</tr>
+		<tr class="hidden">
+				<td>Baseline</td>
+				<td>500</td>
+		</tr>
+		<tr class="hidden">
+				<td>Baseline</td>
+				<td>500</td>
+		</tr>
+		<tr class="hidden">
+				<td>Baseline</td>
+				<td>500</td>
 		</tr>
 		</table>
 		<a href="user_rate_kpi1-2.html"><button class="righted">Next</button>
