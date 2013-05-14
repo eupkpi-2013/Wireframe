@@ -33,8 +33,6 @@ $(document).ready(function(){
 		if(popup == false){
 			$("#overlayEffect").fadeIn();
 			$(".popup").fadeIn();
-			$("#close").fadeIn();
-			center();
 			popup = true;
 		}
 		});
@@ -56,4 +54,6 @@ $(document).ready(function(){
 	}
 
 	} ,jQuery);
+	
+	
 });
