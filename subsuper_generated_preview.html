@@ -1,0 +1,134 @@
+<! DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="style.css">
+<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+<script src="../js/jquery-1.9.1.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="../Highcharts-3.0.1/js/highcharts.js"></script>
+<script src="js.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.printablewindow').click(function(){
+			window.open('printable.html', 'window name', 'window settings');
+			return false;
+		});
+		
+		$('.slideshow-inactive').hide();
+		$('.slideshow-active').show();
+		$('.slideshow-left').click(function(){
+			$('.testchart').toggle();
+			$('.testchart2').toggle();
+		});
+		$('.slideshow-right').click(function(){
+			$('.testchart').toggle();
+			$('.testchart2').toggle();
+		});
+		
+		$('.testchart').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Test Chart 1'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }],
+	});
+	$('.testchart2').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Test Chart 2'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }],
+	});	
+	});
+</script>
+
+<title>eUP KPI</title>
+</head>
+
+<body>
+<div id="user-header" class="header">
+	<header>
+		<a href="">
+		<div id="user-banner" class="banner">
+			<img src="img/up_small.png" class="lefted"/>
+			<h1 class="lefted">eUP KPI</h1>
+		</div>
+		</a>
+		<div id="user-logout" class="logout righted">
+			<a herf="">Logged in as Subsuperuser, </a>
+			<a href="index.html">Logout</a>
+		</div>
+		<div id="user-nav" class="nav">
+			<ul>
+			<li id="user-home"><a href="subsuper_home.html">Home</a></li>
+			<li id="user-rate"><a href="subsuper_kpis.html">KPIs</a></li>
+			<li id="user-rate"><a href="subsuper_accounts.html">Accounts</a></li>
+			<li id="user-results"><a href="subsuper_results.html">Results</a></li>
+			</ul>
+		</div>
+	</header>
+</div>
+<div id="user-contents" class="contents">
+	<h2>New Report Preview</h2>
+	<h3>Report Title 001xppooii</h3>
+	<p>Description here. anduei;rubgila</p>
+	<div class="slideshow">Highchartss here
+		<div class="lefted"><button class="slideshow-left"><</button></div>
+		<div class="testchart slideshow-content slideshow-active"></div>
+		<div class="testchart2 slideshow-content slideshow-inactive"></div>
+		<div class="righted"><button class="slideshow-right">></button></div>
+	</div>
+	<button>View TXT</button>
+	<button>View Excel</button>
+	<button>View PDF</button>
+	<button class="printablewindow">View Printable Page</button><br>
+	<a href="subsuper_generate.html"><button>Edit</button></a>
+	<a href="subsuper_results.html"><button>Publish</button></a>
+	
+</div>
+<div class="popup"></div>
+
+<footer>
+	<div id="login-about">
+		<a href="about.html">About</a>
+	</div>
+</footer>
+
+</body>
+</html>
