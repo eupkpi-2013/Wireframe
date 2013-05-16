@@ -1,0 +1,98 @@
+<! DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="style.css">
+<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+<script src="../js/jquery-1.9.1.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="../Highcharts-3.0.1/js/highcharts.js"></script>
+<script src="js.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+		$('.resultchart').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Fruit Consumption'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }],
+    });
+	});
+</script>
+
+<title>eUP KPI</title>
+</head>
+
+<body>
+<div id="user-header" class="header">
+	<header>
+		<a href="">
+		<div id="user-banner" class="banner">
+			<img src="img/up_small.png" class="lefted"/>
+			<h1 class="lefted">eUP KPI</h1>
+		</div>
+		</a>
+		<div id="user-logout" class="logout righted">
+			<a herf="">Logged in as Subsuperuser, </a>
+			<a href="index.html">Logout</a>
+		</div>
+		<div id="user-nav" class="nav">
+			<ul>
+			<li id="user-home"><a href="subsuper_home.html">Home</a></li>
+			<li id="user-rate"><a href="subsuper_kpis.html">KPIs</a></li>
+			<li id="user-rate"><a href="subsuper_accounts.html">Accounts</a></li>
+			<li id="user-results"><a href="subsuper_results.html">Results</a></li>
+			</ul>
+		</div>
+	</header>
+</div>
+<div id="user-contents" class="contents">
+	<div id="user-kpimenu" class="accordion menu lefted">
+		<div><h3>Report1</h3>
+		</div>
+		<div><h3>Report2</h3>
+		</div>
+		<div><h3>Report3</h3>
+		</div>
+	</div>
+	<div id="user-inside" class="inside">
+		<div class="alert">New KPI have been submitted.</div>
+		<a href="subsuper_generate.html"><button>Create New Report</button></a>
+		<div class="resultchart"></div>
+		<div id="downloadas">Download:
+			<select>
+			  <option value="">PDF</option>
+			  <option value="">EXCEL</option>
+			  <option value="">TXT</option>
+			</select>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<div id="login-about">
+		<a href="about.html">About</a>
+	</div>
+</footer>
+
+</body>
+</html>
