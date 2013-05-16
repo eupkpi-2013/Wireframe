@@ -1,0 +1,114 @@
+<! DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="style.css">
+<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+<script src="../js/jquery-1.9.1.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="../Highcharts-3.0.1/js/highcharts.js"></script>
+<script src="js.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".checklist").change(function(){
+			if ($(this).is(':checked')){
+				$(this).parent().find($("input")).attr('checked', true);
+			}
+			else{
+				$(this).parent().find($("input")).attr('checked', false);
+			}
+		});
+	});
+</script>
+
+<title>eUP KPI</title>
+</head>
+
+<body>
+<div id="user-header" class="header">
+	<header>
+		<a href="">
+		<div id="user-banner" class="banner">
+			<img src="img/up_small.png" class="lefted"/>
+			<h1 class="lefted">eUP KPI</h1>
+		</div>
+		</a>
+		<div id="user-logout" class="logout righted">
+			<a herf="">Logged in as Subsuperuser, </a>
+			<a href="index.html">Logout</a>
+		</div>
+		<div id="user-nav" class="nav">
+			<ul>
+			<li id="user-home"><a href="subsuper_home.html">Home</a></li>
+			<li id="user-rate"><a href="subsuper_kpis.html">KPIs</a></li>
+			<li id="user-rate"><a href="subsuper_accounts.html">Accounts</a></li>
+			<li id="user-results"><a href="subsuper_results.html">Results</a></li>
+			</ul>
+		</div>
+	</header>
+</div>
+<div id="user-contents" class="contents">
+	<h2>Create a New Report</h2>
+	<label>Report Name</label>
+	<input class="input-medium"></input>
+	<label>Description</label>
+	<!-- <input type="textarea"></input> -->
+	<textarea></textarea>
+	<label>Select values to be included:</label>
+		<ul>
+		<li><input type="checkbox"  class="checklist">KPI1</input><br>
+			<ul>
+			<li><input type="checkbox"  class="checklist">SubKPI1</input><br>
+				<ul>
+				<li><input type="checkbox">Metric1</input><br></li>
+				<li><input type="checkbox">Metric2</input><br></li>
+				<li><input type="checkbox">Metric3</input><br></li>
+				</ul>
+			</li></ul>
+			<ul>
+			<li><input type="checkbox"  class="checklist">SubKPI2</input><br>
+				<ul>
+				<li><input type="checkbox">Metric1</input><br></li>
+				<li><input type="checkbox">Metric2</input><br></li>
+				</ul>
+			</li></ul>
+		</li></ul>
+		
+	<label>Select ajvioa:</label>
+		<input type="checkbox" checked>Results After 12 Months</input><br>
+		<input type="checkbox">Baseline (Pre-eUP)</input><br>
+		<input type="checkbox">Target</input><br>
+		<input type="checkbox">Results at Data Migration</input><br>
+		<input type="checkbox">Results at UAT</input><br>
+		<input type="checkbox">Rebaseline at Launch</input><br>
+		<input type="checkbox">Results After 6 Months</input><br>
+		
+	<label>Charts:</label>
+		<input type="checkbox">Line</input><br>
+		<input type="checkbox">Bar</input><br>
+
+	<label>Files:</label>
+		<input type="checkbox">Text</input><br>
+		<input type="checkbox">PDF</input><br>
+		<input type="checkbox">Excel</input><br>
+		
+	<!-- <label>Views:</label>
+		<input type="checkbox">Account1</input><br>
+		<input type="checkbox">Account2</input><br>
+		<input type="checkbox">Account3</input><br> -->
+		
+	<a href="subsuper_generated_preview.html"><button>Generate</button>
+	
+</div>
+
+<footer>
+	<div id="login-about">
+		<a href="about.html">About</a>
+	</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<! DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="style.css">
+<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+<script src="../js/jquery-1.9.1.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="../Highcharts-3.0.1/js/highcharts.js"></script>
+<script src="js.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+		$(".checklist").change(function(){
+			if ($(this).is(':checked')){
+				$(this).parent().find($("input")).attr('checked', true);
+			}
+			else{
+				$(this).parent().find($("input")).attr('checked', false);
+			}
+		});
+	});
+</script>
+
+<title>eUP KPI</title>
+</head>
+
+<body>
+<div id="user-header" class="header">
+	<header>
+		<a href="">
+		<div id="user-banner" class="banner">
+			<img src="img/up_small.png" class="lefted"/>
+			<h1 class="lefted">eUP KPI</h1>
+		</div>
+		</a>
+		<div id="user-logout" class="logout righted">
+			<a herf="">Logged in as Subsuperuser, </a>
+			<a href="index.html">Logout</a>
+		</div>
+		<div id="user-nav" class="nav">
+			<ul>
+			<li id="user-home"><a href="subsuper_home.html">Home</a></li>
+			<li id="user-rate"><a href="subsuper_kpis.html">KPIs</a></li>
+			<li id="user-rate"><a href="subsuper_accounts.html">Accounts</a></li>
+			<li id="user-results"><a href="subsuper_results.html">Results</a></li>
+			</ul>
+		</div>
+	</header>
+</div>
+<div id="user-contents" class="contents">
+	<h2>Assigned KPIs</h2>
+	<label>Select kpis to be included:</label>
+		<ul>
+		<li><input type="checkbox"  class="checklist">KPI1</input><br>
+			<ul>
+			<li><input type="checkbox"  class="checklist">SubKPI1</input><br>
+				<ul>
+				<li><input type="checkbox">Metric1</input><br></li>
+				<li><input type="checkbox">Metric2</input><br></li>
+				<li><input type="checkbox">Metric3</input><br></li>
+				</ul>
+			</li></ul>
+			<ul>
+			<li><input type="checkbox"  class="checklist">SubKPI2</input><br>
+				<ul>
+				<li><input type="checkbox">Metric1</input><br></li>
+				<li><input type="checkbox">Metric2</input><br></li>
+				</ul>
+			</li></ul>
+		</li></ul>
+	<a href="subsuper_kpis.html"><button>Save</button>
+</div>
+
+<footer>
+	<div id="login-about">
+		<a href="about.html">About</a>
+	</div>
+</footer>
+
+</body>
+</html>
